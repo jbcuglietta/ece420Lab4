@@ -10,7 +10,7 @@
 #define MASTER		0
 
 int main(int argc, char * argv[]){
-	int threads, rank, size;
+	//int threads, rank, size;
 	double * graph;
 
 
@@ -19,7 +19,10 @@ int main(int argc, char * argv[]){
 	// Print out the matrix
 	int i;
 	for (i = 0; i < 20; i++){
-			printf("element[%d]: %lf\n", i, graph[i]);
+			graph[i] =  (double)i;
+	}
+	for (i = 0; i < 20; i++){
+			printf("%lf\n",graph[i]);
 	}
 
 	// MPI_Init(&argc, &argv);
