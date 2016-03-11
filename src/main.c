@@ -10,20 +10,15 @@
 #define MASTER		0
 
 int main(int argc, char * argv[]){
-	//int threads, rank, size;
+	int threads, rank, size;
 	double * graph;
 
 
-	create_matrix(&graph, 4,5);
-
-	// Print out the matrix
+	init_matrix(&graph,&size);
 	int i;
-	for (i = 0; i < 20; i++){
-			graph[i] =  (double)i;
-	}
-	for (i = 0; i < 20; i++){
-			printf("%lf\n",graph[i]);
-	}
+	// for (i=0;i<1000;i++){
+	// 	printf("graph[%d] = %lf\n",i,graph[i]);
+	// }
 
 	// MPI_Init(&argc, &argv);
 	// MPI_Comm_size(MPI_COMM_WORLD, &threads);
