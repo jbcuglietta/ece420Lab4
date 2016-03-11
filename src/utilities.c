@@ -32,3 +32,11 @@ void init_edge_matrix(double ***A, int* size){
 
 	*A = edge_matrix;
 }
+
+void create_matrix(double **A, int rows, int cols){
+	double * mat;
+	mat = (double *)malloc(rows*cols*sizeof(double));
+	double init = 1;
+	memset(mat,init,rows*cols*sizeof(double));
+	*A = mat;
+}
